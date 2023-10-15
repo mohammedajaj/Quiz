@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: tahoma,Arial;
+}
+.quiz-app{
+    margin: 20px auto;
+    width: 800px;
+    background-color: #f8f8ff;
+    padding: 15px;
+}
+.quiz-app .quiz-info{
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+}
+.quiz-app .quiz-info .category{
+    flex: 1;
+}
+.quiz-app .quiz-info .count{
+    flex: 1;
+    text-align: right;
+}
+.quiz-area{
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 15px;
+}
+.quiz-area h2{
+    margin: 0;
+}
+.answers-area{
+    background-color: #fff;
+    padding:0 20px 20px;
+}
+.answers-area .answer{
+    background-color: #f9f9f9;
+    padding: 15px;
+}
+.answers-area .answer:not(:last-child){
+    border-bottom: 1px solid #dfdfdf;
+}
+.answers-area .answer input[type="radio"]:checked + label{
+    color: #0075ff;
+}
+.answers-area .answer label{
+    color: #777;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 5px;
+    position: relative;
+    top: -1px;
+}
+.quiz-app .submit-button{
+    background-color: #0075ff;
+    display: block;
+    width: 100%;
+    padding:  15px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    margin: 20px auto;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.quiz-app .submit-button:focus{
+    outline: none;
+} 
+.bullets{
+    border-top: 1px solid #dfdfdf;
+    background-color: #fff;
+    display: flex;
+    padding: 20px;
+}
+.bullets .spans{
+    flex: 1;
+    display: flex;
+}
+.bullets .spans span{
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+.bullets .spans span.on{
+    background-color: #0075ff;
+}
+.results span{
+    font-weight: bold;
+}
+.results span.bad{
+    color: #dc0a0a;
+}
+.results span.good{
+    color: #009688;
+}
+.results span.perfect{
+    color: #0075ff;
+}
+@media only screen and (max-width:800px){
+    .quiz-app{
+        width: 600px;
+    }
+}
+@media only screen and (max-width:600px){
+    .quiz-app{
+        width: 400px;
+    }
+}
+@media only screen and (max-width:400px){
+    .quiz-app{
+        width: 300px;
+    }
+    .bullets{
+        display: inline-block;
+    }
+    .bullets .countdown{
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+@media only screen and (max-width:300px){
+    .quiz-app{
+        width: 200px;
+    }
+    .bullets{
+        display: inline-block;
+    }
+    .bullets .countdown{
+        margin-top: 10px;
+        text-align: center;
+    }
+}
